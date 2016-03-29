@@ -14,4 +14,28 @@ public class Word {
         this.ratio = 0;
     }
 
+    public void setSpelling(String spelling) {
+        this.spelling = spelling;
+    }
+
+    public void setMood(Mood mood) {
+        this.mood = mood;
+    }
+
+    public void setRatio(int ratio) {
+        this.ratio = ratio;
+    }
+
+    public String getSpelling() {
+        return this.spelling;
+    }
+
+    public Mood getMood() {
+        return this.mood;
+    }
+
+    public int getRatio() {
+        return this.ratio;
+    }
+
 }
