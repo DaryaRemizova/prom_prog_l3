@@ -16,8 +16,12 @@ public class TextAnalyzer {
         Mood negative = new Mood("Negative");
 
         //Создаём банк слов
+        ArrayList<Word> wordList = new ArrayList<Word>();
 
         //Считываем текст из файла
+        String fileName = "C://Users//Дарья//IdeaProjects//prom_prog_l3//data.txt";
+        File file = new File(fileName);
+        StringBuilder sb = new StringBuilder();
 
     }
 }
