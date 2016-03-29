@@ -14,6 +14,12 @@ public class Word {
         this.ratio = 0;
     }
 
+    Word(String spelling, Mood mood, int ratio) {
+        this.spelling = spelling;
+        this.mood = mood;
+        this.ratio = ratio;
+    }
+
     public void setSpelling(String spelling) {
         this.spelling = spelling;
     }
