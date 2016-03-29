@@ -10,6 +10,7 @@ import java.util.regex.*;
 
 public class TextAnalyzer {
     public static void main(String[] args) {
+        int ratioWords = 0;
 
         //Создаём настороения
         Mood positive = new Mood("Positive");
@@ -36,6 +37,34 @@ public class TextAnalyzer {
         String fileName = "C://Users//Дарья//IdeaProjects//prom_prog_l3//data.txt";
         File file = new File(fileName);
         StringBuilder sb = new StringBuilder();
+        String tempString;
+        int counter = 0;
+
+        try {
+            BufferedReader in = new BufferedReader(new FileReader( file.getAbsoluteFile()));
+
+            while ((tempString = in.readLine()) != null) {
+                for (Word item : wordList) {
+                    Pattern p = Pattern.compile(item.getSpelling());
+                    Matcher m = p.matcher(tempString);
+                    counter = 0;
+
+                    //Подсчёт поличества совпадений слова в очередной строке
+                    while (m.find()) {
+                        counter++;
+                    }
+
+                    //Учитываем вес слова в общем рейтинге текста
+                    if(counter > 0) {
+                        ratioWords += item.getRatio() * counter;
+                    }
+                }
+            }
+            System.out.println("RatingText: " + ratioWords);
+            in.close();
+        } catch(IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }
