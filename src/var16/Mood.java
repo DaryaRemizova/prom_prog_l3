@@ -10,4 +10,8 @@ public class Mood {
         this.title = "unset";
     }
 
+    Mood(String title) {
+        this.title = title;
+    }
+
 }

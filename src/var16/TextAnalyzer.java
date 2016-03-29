@@ -12,6 +12,8 @@ public class TextAnalyzer {
     public static void main(String[] args) {
 
         //Создаём настороения
+        Mood positive = new Mood("Positive");
+        Mood negative = new Mood("Negative");
 
         //Создаём банк слов
 
