@@ -53,7 +53,7 @@ public class TextAnalyzer {
                     while (m.find()) {
                         counter++;
                     }
-
+// test
                     //Учитываем вес слова в общем рейтинге текста
                     if(counter > 0) {
                         ratioWords += item.getRatio() * counter;
